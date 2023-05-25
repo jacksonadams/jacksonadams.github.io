@@ -85,25 +85,25 @@ function isDateLater(a, b){
 
 // Sorts the Posts array by latest date
 function sortPostsByLatest () {
-    Posts.sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
+    Posts.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
     createPostList();
 }
 
 // Sorts the Posts array by oldest date
 function sortPostsByOldest () {
-    Posts.sort((a, b) => Date.parse(a.date) - Date.parse(b.date))
+    Posts.sort((a, b) => Date.parse(a.date) - Date.parse(b.date));
     createPostList();
 }
 
 // Sorts the Posts array by title from A-Z
 function sortPostsByTitleAZ () {
-    Posts.sort((a, b) => (a.title > b.title) ? 1 : ((b.title > a.title) ? -1 : 0))
+    Posts.sort((a, b) => (a.title > b.title) ? 1 : ((b.title > a.title) ? -1 : 0));
     createPostList();
 }
 
 // Sorts the Posts array by title from Z-A
 function sortPostsByTitleZA () {
-    Posts.sort((a, b) => (b.title > a.title) ? 1 : ((a.title > b.title) ? -1 : 0))
+    Posts.sort((a, b) => (b.title > a.title) ? 1 : ((a.title > b.title) ? -1 : 0));
     createPostList();
 }
 

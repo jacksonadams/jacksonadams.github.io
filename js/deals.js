@@ -19,31 +19,51 @@ class Deal {
 // Deal data
 let Deals = [
     new Deal("Accumold", 2022, "accumold.png"),
-    new Deal("Casey's General Store", 2022, "caseys.png"),
-    new Deal("Time Magazine", 2022, "time.svg.png"),
-    new Deal("IBM", 2022, "ibm.svg.png"),
-    new Deal("Saks Fifth Avenue", 2022, "saks-fifth-avenue.png"),
-    new Deal("Eurofins", 2022, "eurofins.svg.png"),
-    new Deal("Siegwerk", 2022, "siegwerk.svg.png"),
-    new Deal("Summit Equity Group", 2022, "seg.png"),
-    new Deal("Davis Equipment", 2022, "davis.jpg"),
-    new Deal("Lomont Molding", 2022, "lomont.jpg"),
-    new Deal("Parallel AG", 2022, "parallel.png.webp"),
-    new Deal("Mid American Energy", 2022, "midamerican.png"),
-    new Deal("Color Converting", 2022, ""),
-    new Deal("Vision Bank", 2022, "visionbank.png"),
-    new Deal("Equity Dynamics", 2022, "equity-dynamics.png.webp"),
-    new Deal("Medicap", 2022, "medicap.png"),
-    new Deal("Hammer Pharmacy", 2022, ""),
-    new Deal("Hammer Medical Supply", 2022, "hms.png"),
-    new Deal("Kemin Industries", 2022, "kemin.png"),
-    new Deal("Meredith Corporation", 2022, "meredith.png"),
+    new Deal("Casey's General Store", 2023, "caseys.png"),
+    new Deal("Time Magazine", 2021, "time.svg.png"),
+    new Deal("IBM", 2020, "ibm.svg.png"),
+    new Deal("Saks Fifth Avenue", 2015, "saks-fifth-avenue.png"),
+    new Deal("Eurofins", 2010, "eurofins.svg.png"),
+    new Deal("Siegwerk", 2009, "siegwerk.svg.png"),
+    new Deal("Summit Equity Group", 2004, "seg.png"),
+    new Deal("Davis Equipment", 2004, "davis.jpg"),
+    new Deal("Lomont Molding", 2003, "lomont.jpg"),
+    new Deal("Parallel AG", 2002, "parallel.png.webp"),
+    new Deal("Mid American Energy", 2000, "midamerican.png"),
+    new Deal("Color Converting", 1999, ""),
+    new Deal("Vision Bank", 1996, "visionbank.png"),
+    new Deal("Equity Dynamics", 1993, "equity-dynamics.png.webp"),
+    new Deal("Medicap", 1992, "medicap.png"),
+    new Deal("Hammer Pharmacy", 1989, ""),
+    new Deal("Hammer Medical Supply", 1983, "hms.png"),
+    new Deal("Kemin Industries", 1984, "kemin.png"),
+    new Deal("Meredith Corporation", 1987, "meredith.png"),
 ];
+
+function getDealElement(year){
+    if(year >= 2020){
+        return $(".deals-20");
+    } else if (year >= 2010){
+        return $(".deals-10");
+    } else if (year >= 2000){
+        return $(".deals-00");
+    } else if (year >= 1990){
+        return $(".deals-90");
+    } else if (year >= 1980){
+        return $(".deals-80");
+    }
+}
+
+function sortDealsByYear(){
+    Deals.sort((a, b) => b.year - a.year);
+}
 
 // Load data into webpage
 $(document).ready(function() {
-    let deals = $(".deals");
+    // Sort deals by year
+    sortDealsByYear();
 
+    // Add deals to webpage
     for(let i = 0; i < Deals.length; i ++){
         let dealOuter = document.createElement("div");
         let dealInner = document.createElement("div");
@@ -77,7 +97,9 @@ $(document).ready(function() {
         $(dealInner).append(dealFront);
         $(dealInner).append(dealBack);
         $(dealOuter).append(dealInner);
-        $(deals).append(dealOuter);
+
+
+        $(getDealElement(Deals[i].year)).append(dealOuter);
     }
 
     /*
