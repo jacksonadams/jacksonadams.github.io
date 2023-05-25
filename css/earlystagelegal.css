@@ -3,6 +3,10 @@
     Applies to the EarlyStageLegal page.
 */
 
+body {
+    padding-bottom: 30px;
+}
+
 .esl-description {
     padding: 0px 60px;
     margin-top: -20px;
@@ -52,11 +56,30 @@
     margin-bottom: 3px;
     display: block;
 
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
     transition: 0.2s;
 }
 
 .esl-table-cell a:hover {
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.20);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     cursor: pointer;
+}
+
+.legal-score-button {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    padding: 10px 10px;
+    border-radius: 50px;
+    text-align: center;
+    font-style: italic;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.legal-score-button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    width: 320px;
 }
