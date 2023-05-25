@@ -4,7 +4,7 @@
 */
 
 body {
-    padding-bottom: 30px;
+    padding-bottom: 60px;
 }
 
 .esl-description {
@@ -66,27 +66,38 @@ body {
 }
 
 /* Styling for the Legal Management Score function. */
-.legal-score-button {
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
-    padding: 10px 10px;
-    border-radius: 50px;
-    text-align: center;
-    font-style: italic;
+.lms-form-container {
+    margin-top: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    width: 67%;
     margin-left: auto;
     margin-right: auto;
-    width: 300px;
-    font-weight: 600;
-    transition: 0.2s;
+    padding-bottom: 60px;
 }
 
-.legal-score-button:hover {
-    cursor: pointer;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    width: 320px;
+.lms-header-img-container {
+    margin: -20px;
+    overflow: hidden;
+    margin-bottom: 30px;
 }
 
-.lms-form {
-    padding: 20px 50px;
+.lms-header-img {
+    width: 100%;
+}
+
+.lms-header-text {
+    margin-left: 10px;
+}
+
+.lms-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+.lms-description {
+    font-size: 14px;
+    margin-top: 5px;
 }
 
 .lms-question-block {
@@ -94,16 +105,55 @@ body {
     margin-top: 15px;
 }
 
+.lms-question-block-inner {
+    margin-left: 60px;
+}
+
 .lms-question {
     display: block;
 }
 
-.lms-option {
-    margin-left: 10px;
+.lms-yes-label {
+    margin-right: 10px;
 }
 
 .lms-question-number {
     font-family: "roc grotesk";
     font-size: 36px;
     color: rgba(0, 0, 0, 0.25);
+    width: 50px;
+    text-align: right;
+    margin-bottom: -50px;
+}
+
+.lms-button {
+    background: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    padding: 10px 10px;
+    border-radius: 50px;
+    text-align: center;
+    font-style: italic;
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.lms-button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    width: 320px;
+}
+
+.lms-results {
+    width: 67%;
+    margin-left: auto;
+    margin-right: auto;
+    background: black;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    display: none;
 }
