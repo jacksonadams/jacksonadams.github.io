@@ -1,0 +1,4 @@
+/*
+    main.js
+    This script applies to all pages.
+*/

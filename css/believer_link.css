@@ -1,0 +1,70 @@
+.believer-link-description {
+    padding: 0px 60px 30px 60px;
+}
+
+.blog {
+    padding: 50px;
+    padding-top: 0px;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.post-list-section {
+    padding-right: 50px;
+    padding-top: 0;
+}
+
+.post-list-settings {
+    margin-top: -40px;
+    text-align: right;
+}
+
+.post-item {
+    border-left: 4px black solid;
+    padding-left: 15px;
+}
+
+.post-item-title {
+    font-size: 24px;
+    font-weight: 400;
+    transition: 0.25s;
+}
+
+.post-item-title:hover {
+    cursor: pointer;
+}
+
+.post-item-title-selected {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.post-item-date {
+    font-weight: 400;
+    margin-top: -25px;
+}
+
+.post-content {
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+    display: none;
+}
+
+.post-content-image-container {
+    height: 150px;
+    overflow: hidden;
+}
+
+.post-content-image {
+    width: 100%;
+}
+
+.post-content-body {
+    padding: 0px 40px 30px 40px;
+}
+
+.post-content-date {
+    font-weight: 400;
+    margin-top: -20px;
+}

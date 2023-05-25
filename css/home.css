@@ -1,0 +1,29 @@
+/*
+    home.css
+    Applies to home page.
+*/
+
+body {
+    background-image: url("../images/home-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    color: white;
+    font-size: 126px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 126px;
+    margin-left: 15%;
+    margin-top: 120px;
+}
+
+p {
+    color: white;
+    font-size: 18px;
+    margin-left: 15%;
+    margin-top: -50px;
+    width: 35%;
+}

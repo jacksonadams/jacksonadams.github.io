@@ -1,0 +1,118 @@
+/*
+    deal_history.css
+    Applies to the Deal History page.
+*/
+
+@import url("https://use.typekit.net/qgw2zry.css");
+
+body {
+    padding-bottom: 50px;
+}
+
+.deals {
+    padding: 0px 50px;
+    text-align: center;
+}
+
+.deal {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    display: inline-block;
+    margin: 15px;
+}
+  
+.deal-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+  
+.deal:hover .deal-inner {
+    transform: rotateY(180deg);
+}
+  
+.deal-front, .deal-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+}
+
+.deal-front {
+    background-color: white;
+    color: black;
+}
+
+.deal-img {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.deal-img img {
+    max-height: 85%;
+    max-width: 85%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.deal-front h3 {
+    font-size: 24px;
+    font-weight: 300;
+    width: 100%;
+    position: absolute; 
+    bottom: 35px;
+}
+
+.deal-front h5 {
+    font-family: "roc-grotesk";
+    background: black;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    width: 60px;
+    padding: 3px;
+    padding-bottom: 0px;
+    position: absolute; 
+    bottom: -10px;
+    left: 40%;
+}
+  
+.deal-back {
+    background: linear-gradient(to bottom, white 42%, black 42%);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.deal-back p {
+    width: 80%;
+    margin-left: 10%;
+    text-align: left; 
+    font-size: 14px;
+}
+
+.deal-back .deal-img {
+    width: 50%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -10px;
+    margin-top: 10px;
+}
+
+.deal-back h2 {
+    font-weight: 700;
+    margin-top: 30px;
+}
