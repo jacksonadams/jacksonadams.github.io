@@ -1,0 +1,81 @@
+/*
+    timeline.css
+    Applies to the Family History page.
+*/
+
+.timeline {
+    display: grid;
+    grid-template-columns: 30% 10% 30%;
+    padding: 20px;
+    margin-left: 15%;
+}
+
+.timeline-line {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 3px;
+    background: rgba(0, 0, 0, 0.15);
+    height: 1000px;
+}
+
+.timeline-dot {
+    margin-top: 33px;
+
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background:white;
+    border: 3px solid rgba(0, 0, 0, 0.15);
+    margin-left: -7.5px;
+}
+
+.timeline-marker {
+    margin-top: 119px;
+}
+
+.timeline-connector {
+    margin-top: 40.5px;
+
+    position: absolute;
+    background: rgba(0, 0, 0, 0.15);
+    width: 3.5%;
+    height: 3px;
+}
+.timeline-connector-right {
+    margin-left: 10px;
+}
+.timeline-connector-left {
+    margin-left: calc(-3.5% - 6px);
+}
+
+.timeline-post {
+    width: 100%;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
+
+.timeline-post-img {
+    width: 100%;
+    display: none;
+}
+
+.timeline-post-text {
+    padding: 20px;
+}
+
+.timeline-post-title {
+    margin-top: 0px;
+}
+
+.timeline-post-date {
+    margin-top: -20px;
+    margin-bottom: 0px;
+}
+
+.timeline-post-description {
+    margin-bottom: 0px;
+    display: none;
+}
