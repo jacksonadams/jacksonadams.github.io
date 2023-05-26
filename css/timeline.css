@@ -76,14 +76,17 @@
 
 .timeline-post-title {
     margin-top: 0px;
+    font-size: 15px;
 }
 
 .timeline-post-date {
-    margin-top: -20px;
+    margin-top: -17px;
     margin-bottom: 0px;
+    font-size: 10px;
 }
 
 .timeline-post-description {
     margin-bottom: 0px;
     display: none;
+    font-size: 12px;
 }

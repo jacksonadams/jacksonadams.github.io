@@ -69,6 +69,19 @@
     margin-top: -20px;
 }
 
+.new-post-launch-button {
+    font-family: "playfair display";
+    padding: 2px 10px;
+    background: white;
+    border: 1px solid black;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.new-post-launch-button:hover {
+    cursor: pointer;
+}
+
 .new-post {
     background: white;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
@@ -76,9 +89,10 @@
     position: fixed;
     left: 20%;
     right: 20%;
-    top: 200px;
+    top: 150px;
     bottom: 100px;
     padding: 10px 30px;
+    display: none;
 }
 
 .new-post-title {
@@ -102,9 +116,14 @@
 }
 
 .new-post-content {
-    width: 97%;
-    height: 230px;
-    margin-top: 20px;
+    position: absolute;
+    
+    margin-top: 50px;
+    top: 150px;
+    left: 30px;
+    right: 30px;
+    bottom: 60px;
+
     padding: 10px;
     resize: none;
     font-family: "playfair display";
@@ -122,6 +141,36 @@
 }
 
 .new-post-buttons {
+    position: absolute;
     margin-top: 10px;
+    right: 30px;
+    bottom: 20px;
+}
+
+.new-post-button {
+    font-family: "playfair-display";
+    background: white;
+    border: 1px solid black;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-left: 5px;
+    font-style: italic;
+}
+
+.new-post-button:hover {
+    cursor: pointer;
+}
+
+.new-post-close {
+    color: rgba(0, 0, 0, 0.2);
     float: right;
+    margin-top: 5px;
+    margin-right: -10px;
+    transition: 0.2s;
+}
+
+.new-post-close:hover {
+    cursor: pointer;
+    color: black;
 }

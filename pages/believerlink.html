@@ -48,7 +48,7 @@
                     </select>
                     <!-- <label class = "search-icon" for = "post-search-bar"><i class="fa-solid fa-magnifying-glass"></i></label> -->
                     <input class = "post-search-bar" name = "post-search-bar" type = "text" placeholder = "Search...">
-                    <button>New Post</button>
+                    <button class = "new-post-launch-button">New Post</button>
                 </div>
 
                 <div class = "post-list">
@@ -71,6 +71,8 @@
 
         <!-- Writing a new post -->
         <div class = "new-post">
+            <p class = "new-post-close"><i class = "fa-solid fa-xmark"></i></p>
+
             <h3 class = "new-post-heading">New Post</h3>
 
             <label class = "new-post-title-label" for = "new-post-title">Title </label>
@@ -87,8 +89,8 @@
             <textarea class = "new-post-content" name = "new-post-content" placeholder = "Write here..."></textarea>
 
             <div class = "new-post-buttons">
-                <button>Save Draft</button>
-                <button>Post</button>
+                <button class = "new-post-button">Save Draft</button>
+                <button class = "new-post-button new-post-post-button">Post</button>
             </div>
         </div>
 

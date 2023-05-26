@@ -247,6 +247,20 @@ function setPost(num){
     $(postContent).fadeIn(400);
 }
 
+function formatDate(date){
+    // 2023-05-04
+
+    let splitDate = date.split("-");
+    let year = splitDate[0];
+    let monthNum = parseInt(splitDate[1]);
+    let day = parseInt(splitDate[2]);
+
+    let months = "January February March April May June July August September October November December".split(" ");
+    let month = months[monthNum-1];
+
+    return month + " " + day + " " + year;
+}
+
 // Load data into webpage
 $(document).ready(function() {
     // Load posts by latest date
@@ -285,5 +299,45 @@ $(document).ready(function() {
         $(".post-item-title").removeClass("post-item-title-selected");
         $(this).addClass("post-item-title-selected");
     });
+
+    // Open new post window
+    $(".new-post-launch-button").on("click", function(){
+        $(".new-post").fadeIn(100);
+    });
+
+    // Close new post window
+    $(".new-post-close").on("click", function(){
+        $(".new-post").fadeOut(100);
+    });
+
+    // Add new post
+    $(".new-post-post-button").on("click", function(){
+        let newTitle = $(".new-post-title").val();
+        let newDate = formatDate($(".new-post-date").val());
+        let newContent = $(".new-post-content").val();
+
+        let imageFiles = $(".new-post-img")[0].files;
+        let newImage = "";
+
+        if(imageFiles.length > 0){
+            newImage = URL.createObjectURL(imageFiles[0]);
+        }
+
+        Posts.unshift(new Post(newTitle, newDate, newContent, newImage));
+        createPostList();
+
+        setPost(0);
+        selectTitleAfterSort();
+
+        $(".new-post").fadeOut(100);
+    });
 });
 
+/*
+Some content will go here.
+
+And another paragraph goes here. And another paragraph goes here. And another paragraph goes here. And another paragraph goes here. And another paragraph goes here. And another paragraph goes here. And another paragraph goes here. And another paragraph goes here. And another paragraph goes here. And another paragraph goes here. And another paragraph goes here. And another paragraph goes here. And another paragraph goes here. 
+
+The end. Thanks for reading!
+Jackson
+*/
