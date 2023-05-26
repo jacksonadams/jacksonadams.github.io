@@ -18,26 +18,29 @@ class Deal {
 
 // Deal data
 let Deals = [
-    new Deal("Accumold", 2022, "accumold.png"),
-    new Deal("Casey's General Store", 2023, "caseys.png"),
-    new Deal("Time Magazine", 2021, "time.svg.png"),
-    new Deal("IBM", 2020, "ibm.svg.png"),
-    new Deal("Saks Fifth Avenue", 2015, "saks-fifth-avenue.png"),
-    new Deal("Eurofins", 2010, "eurofins.svg.png"),
-    new Deal("Siegwerk", 2009, "siegwerk.svg.png"),
-    new Deal("Summit Equity Group", 2004, "seg.png"),
-    new Deal("Davis Equipment", 2004, "davis.jpg"),
-    new Deal("Lomont Molding", 2003, "lomont.jpg"),
-    new Deal("Parallel AG", 2002, "parallel.png.webp"),
-    new Deal("Mid American Energy", 2000, "midamerican.png"),
-    new Deal("Color Converting", 1999, ""),
-    new Deal("Vision Bank", 1996, "visionbank.png"),
-    new Deal("Equity Dynamics", 1993, "equity-dynamics.png.webp"),
-    new Deal("Medicap", 1992, "medicap.png"),
-    new Deal("Hammer Pharmacy", 1989, ""),
-    new Deal("Hammer Medical Supply", 1983, "hms.png"),
-    new Deal("Kemin Industries", 1984, "kemin.png"),
-    new Deal("Meredith Corporation", 1987, "meredith.png"),
+    /* With correct year */
+    new Deal("Equity Dynamics", 1999, "equity-dynamics.png.webp"),
+    new Deal("Davis Equipment", 2000, "davis.jpg"),
+    new Deal("Summit Equity Group", 2005, "seg.png"),
+    new Deal("Eurofins", 2009, "eurofins.svg.png"),
+    new Deal("Accumold", 2010, "accumold.png"),
+    new Deal("Siegwerk", 2018, "siegwerk.svg.png"),
+    new Deal("Medicap", 1996, "medicap.png"),
+    new Deal("Color Converting", 1997, ""),
+    new Deal("Kemin Industries", 2009, "kemin.png"),
+    new Deal("Meredith Corporation", 2009, "meredith.png"),
+    new Deal("Mid American Energy", 2011, "midamerican.png"),
+
+    /* With wrong year */
+    new Deal("Casey's General Store", 2030, "caseys.png"),
+    new Deal("Time Magazine", 2030, "time.svg.png"),
+    new Deal("IBM", 2030, "ibm.svg.png"),
+    new Deal("Saks Fifth Avenue", 2030, "saks-fifth-avenue.png"),
+    new Deal("Lomont Molding", 2030, "lomont.jpg"),
+    new Deal("Parallel AG", 2030, "parallel.png.webp"),
+    new Deal("Vision Bank", 2030, "visionbank.png"),
+    new Deal("Hammer Pharmacy", 2030, ""),
+    new Deal("Hammer Medical Supply", 2030, "hms.png"),
 ];
 
 function getDealElement(year){
@@ -49,8 +52,6 @@ function getDealElement(year){
         return $(".deals-00");
     } else if (year >= 1990){
         return $(".deals-90");
-    } else if (year >= 1980){
-        return $(".deals-80");
     }
 }
 

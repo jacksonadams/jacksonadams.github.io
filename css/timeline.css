@@ -16,7 +16,7 @@
 
     width: 3px;
     background: rgba(0, 0, 0, 0.15);
-    height: 1000px;
+    height: 100%;
 }
 
 .timeline-dot {
@@ -55,15 +55,23 @@
     background: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
     margin-bottom: 20px;
+    transition: 0.2s;
+}
+
+.timeline-post:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 .timeline-post-img {
+    height: 100%;
     width: 100%;
     display: none;
+    margin-bottom: 0;
 }
 
 .timeline-post-text {
-    padding: 20px;
+    padding: 15px 20px;
 }
 
 .timeline-post-title {
