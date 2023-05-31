@@ -16,6 +16,18 @@ class Post {
 }
 
 let Posts = [
+    new Post("", "November 27 2004", "Luke Van Adams is born", ""),
+
+    new Post("", "September 10 2001", "Jackson Edward Adams is born", ""),
+
+    new Post("", "June 6 1999", "Andrew Dean Adams is born", ""),
+
+    new Post("", "September 12 1996", "Elizabeth Johnson Adams is born", ""),
+
+    new Post("https://cdn.discordapp.com/attachments/324321229022560259/1113495317116100711/Screenshot_2023-05-31_at_10.52.31_AM.png", "August 2 2020", "Elizabeth and Ben get married", ""),
+
+    /*new Post("https://images.unsplash.com/photo-1614687345016-9183348d8f35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3VucmlzZSUyMHNreXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80", "February 19 2021", "Trip to Florida 2021", "This trip to Florida was a blast! We found some cool shells and played some intense ping pong. The beach was a bit cold but the sunset was awesome."),
+
     new Post("https://images.unsplash.com/photo-1614687345016-9183348d8f35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3VucmlzZSUyMHNreXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80", "February 19 2021", "Trip to Florida 2021", "This trip to Florida was a blast! We found some cool shells and played some intense ping pong. The beach was a bit cold but the sunset was awesome."),
 
     new Post("https://images.unsplash.com/photo-1614687345016-9183348d8f35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3VucmlzZSUyMHNreXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80", "February 11 2020", "Trip to Florida 2020", "This trip to Florida was a blast! We found some cool shells and played some intense ping pong. The beach was a bit cold but the sunset was awesome."),
@@ -50,7 +62,7 @@ let Posts = [
 
     new Post("https://www.tyndale.com/sites/readthearc/wp-content/uploads/sites/12/2019/07/rachel-strong-VhcxuEGNXo4-unsplash.jpg", "September 9 2022", "SBL Family Fall Retreat", ""),
 
-    new Post("https://images.unsplash.com/photo-1682688759457-52bcb4dc1578?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2187&q=80", "June 3 2023", "Hawaii", ""),
+    new Post("https://images.unsplash.com/photo-1682688759457-52bcb4dc1578?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2187&q=80", "June 3 2023", "Hawaii", ""),*/
 ];
 
 function createPost (post) {
@@ -67,9 +79,12 @@ function createPost (post) {
     let timelinePost = document.createElement("div");
     $(timelinePost).addClass("timeline-post");
 
-    let img = document.createElement("img");
-    $(img).addClass("timeline-post-img");
-    $(img).attr("src", post.image);
+    if(post.image.length > 0){
+        let img = document.createElement("img");
+        $(img).addClass("timeline-post-img");
+        $(img).attr("src", post.image);
+        $(timelinePost).append(img);
+    }
 
     let postText = document.createElement("div");
     $(postText).addClass("timeline-post-text");
@@ -82,7 +97,6 @@ function createPost (post) {
     $(date).addClass("timeline-post-date");
     $(date).text(post.date);
 
-    $(timelinePost).append(img);
     $(postText).append(title);
     $(postText).append(date);
 
